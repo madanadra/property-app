@@ -8,7 +8,7 @@ import { TopBar, Layout, House } from './App';
 
 function Detail() {
     const isMobile = useMediaQuery('(max-width: 900px)')
-    const api = 'http://inmu-property-api.dgrande.com/api/'
+    const api = 'https://inmu-property-api.dgrande.com/api/'
     const [drawer, setDrawer] = useState(false)
     const [dialog, setDialog] = useState(false)
     const [loading, setLoading] = useState(false)

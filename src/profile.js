@@ -6,7 +6,7 @@ import { TopBar, Layout } from './App';
 
 function Profile() {
     const isMobile = useMediaQuery('(max-width: 900px)')
-    const api = 'http://inmu-property-api.dgrande.com/api/'
+    const api = 'https://inmu-property-api.dgrande.com/api/'
     const id = localStorage.getItem('user')
     const [drawer, setDrawer] = useState(false)
     const [loading, setLoading] = useState(false)
@@ -51,7 +51,7 @@ function Profile() {
     const Content = () => {
         return (<>
           {loading ? <LinearProgress sx={{ width: '100%' }} /> : <Box sx={{ p: '20px', ...(dialog && {overflow: 'hidden'}), ...(drawer && {overflow: 'hidden'}) }}>
-          <Avatar alt="Profile Image" src={`http://inmu-property-api.dgrande.com/images/${profile.image}`} sx={{ mx: 'auto', width: '210px', height: '210px' }} />
+          <Avatar alt="Profile Image" src={`https://inmu-property-api.dgrande.com/images/${profile.image}`} sx={{ mx: 'auto', width: '210px', height: '210px' }} />
           <Typography sx={{ mt: '15px', color: '#c0c0c0', fontSize: '15px', width: '100%' }}>Nama</Typography>
           <Typography sx={{ mb: '10px', fontSize: '19px' }}>{profile.name}</Typography>
           <Typography sx={{ color: '#c0c0c0', fontSize: '15px' }}>Email</Typography>

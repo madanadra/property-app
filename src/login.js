@@ -3,7 +3,7 @@ import { useRef, useState, useEffect } from 'react';
 import axios from 'axios';
 
 function Login() {
-    const api = 'http://inmu-property-api.dgrande.com/api/'
+    const api = 'https://inmu-property-api.dgrande.com/api/'
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(false)
     const satu = useRef()

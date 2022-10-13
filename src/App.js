@@ -8,7 +8,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 import PersonIcon from '@mui/icons-material/Person';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import { BrowserRouter, Routes, Route, useLocation, Link, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, useLocation, Link, Navigate } from 'react-router-dom';
 import Login from './login';
 import Home from './home';
 import Detail from './detail';
@@ -117,13 +117,13 @@ export const Left = () => {
     </Link></CardActionArea>
     <CardActionArea><Typography sx={{ fontSize: '17px', p: '3px 30px'}}>Edit Pembayaran</Typography></CardActionArea>
     <Typography sx={{ fontSize: '15px', p: '3px 30px', mt: '5px', color: '#c0c0c0' }}><InsertDriveFileIcon sx={{ m: '0 5px -4px 0', fontSize: '21px' }} />Report</Typography>
-    <CardActionArea href='http://inmu-property-api.dgrande.com/penerimaan-harian'>
+    <CardActionArea href='https://inmu-property-api.dgrande.com/penerimaan-harian'>
       <Typography sx={{ fontSize: '17px', p: '3px 30px'}}>Penerimaan Harian</Typography>
     </CardActionArea>
-    <CardActionArea href='http://inmu-property-api.dgrande.com/saldo-piutang'>
+    <CardActionArea href='https://inmu-property-api.dgrande.com/saldo-piutang'>
       <Typography sx={{ fontSize: '17px', p: '3px 30px'}}>Saldo Piutang</Typography>
     </CardActionArea>
-    <CardActionArea href='http://inmu-property-api.dgrande.com/data-kavling'>
+    <CardActionArea href='https://inmu-property-api.dgrande.com/data-kavling'>
       <Typography sx={{ fontSize: '17px', p: '3px 30px' }}>Data Kavling</Typography>
     </CardActionArea>
     <Typography sx={{ fontSize: '15px', p: '3px 30px', mt: '5px', color: '#c0c0c0' }}><PersonIcon sx={{ m: '0 5px -4px 0', fontSize: '21px' }} />Account</Typography>
@@ -155,7 +155,7 @@ function App() {
 
   return ( 
     <ThemeProvider theme={theme}>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <HashRouter>
         <Routes>
           <Route path="/login" element={!localStorage.getItem('user') || isNaN(+localStorage.getItem('user')) ? <Login /> : <Navigate to="/" />} />
           <Route exact path="/" element={!localStorage.getItem('user') || isNaN(+localStorage.getItem('user')) ? <Navigate to="/login" /> : <Home /> } />
@@ -168,7 +168,7 @@ function App() {
           <Route path="/edit/ganti-kavling" element={!localStorage.getItem('user') || isNaN(+localStorage.getItem('user')) ? <Navigate to="/login" /> : <GantiKavling />} />
           <Route path="/profile" element={!localStorage.getItem('user') || isNaN(+localStorage.getItem('user')) ? <Navigate to="/login" /> : <Profile />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
   );
 }

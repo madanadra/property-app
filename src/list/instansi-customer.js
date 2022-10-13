@@ -7,7 +7,7 @@ import { TopBar, Layout } from '../App';
 
 function InstansiCustomer() {
     const isMobile = useMediaQuery('(max-width: 900px)')
-    const api = 'http://inmu-property-api.dgrande.com/api/'
+    const api = 'https://inmu-property-api.dgrande.com/api/'
     const [dialog, setDialog] = useState(false)
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(false)

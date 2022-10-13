@@ -4,7 +4,7 @@ import axios from 'axios';
 import { TopBar, Layout } from '../App';
 
 function GantiKavling() {
-    const api = 'http://inmu-property-api.dgrande.com/api/'
+    const api = 'https://inmu-property-api.dgrande.com/api/'
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(false)
     const [houses, setHouses] = useState([])

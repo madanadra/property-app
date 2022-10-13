@@ -12,7 +12,7 @@ import { TopBar, Layout, House, Left } from './App';
 
 function Home() {
     const isMobile = useMediaQuery('(max-width: 900px)')
-    const api = 'http://inmu-property-api.dgrande.com/api/'
+    const api = 'https://inmu-property-api.dgrande.com/api/'
     const [bottom, setBottom] = useState(false)
     const [left, setLeft] = useState(false)
     const [loading, setLoading] = useState(false)
